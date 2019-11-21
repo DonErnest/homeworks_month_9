@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homework65</title>
+</head>
+<body>
+	<script type="application/javascript">
+		let list = ["молоко", "пиво","пиво","молоко","молоко"]
+		for (var i = 0; i < list.length; i++) {
+			switch (list[i]) {
+				case "молоко" :
+					console.log('хорошо')
+					break;
+				case "пиво": 
+					console.log('плохо')
+					break;
+			}
+		}
+	</script>
+	<script type="application/javascript">
+		let list1 = [1,5,12,4,3]
+		let list2 = [2,3,4,5,6,7,8,9,10]
+		let list3 = [3,10,17]
+
+		function average(list) {
+			let total = 0
+			for (var i = 0; i < list.length; i++) {
+				total += list[i]
+			}
+			return total/list.length
+		}
+
+		console.log(average(list1))
+		console.log(average(list2))
+		console.log(average(list3))
+	</script>
+	<script type='application/javascript'>
+		let answer= prompt('У квадратного стола отпилили один угол. Сколько теперь углов у него стало?', 0)
+		if (parseInt(answer) === 5 || answer === 'пять') {
+			alert('Ответ правильный!');
+		} else {
+			alert('Ответ неправильный!');
+		}
+	</script>
+	<script type='application/javascript'>
+		let duck = {
+			name: "Дональд",  
+			color: "белый",
+			old: 1, 
+			toStr: function(name, color, old) {console.log(`${this.name}, ${this.color}, ${this.old}`);},
+			say: function() {console.log('Кря кря!');},
+		}
+		duck.toStr()
+		duck.say()
+	</script>
+</body>
+</html>
