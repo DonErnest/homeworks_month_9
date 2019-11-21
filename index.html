@@ -36,12 +36,15 @@
 		console.log(average(list3))
 	</script>
 	<script type='application/javascript'>
-		let answer= prompt('У квадратного стола отпилили один угол. Сколько теперь углов у него стало?', 0)
-		if (parseInt(answer) === 5 || answer === 'пять') {
-			alert('Ответ правильный!');
-		} else {
-			alert('Ответ неправильный!');
+		function riddle() {
+			let answer= prompt('У квадратного стола отпилили один угол. Сколько теперь углов у него стало?', 0)
+			if (parseInt(answer) === 5 || answer === 'пять') {
+				alert('Ответ правильный!');
+			} else {
+				alert('Ответ неправильный!');
+			}
 		}
+		riddle()
 	</script>
 	<script type='application/javascript'>
 		let duck = {
