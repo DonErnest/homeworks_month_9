@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task 4</title>
+</head>
+<body>
+	<div id="container"></div>
+	<input id="add-item-btn" type="button" value="+">
+	<script type='application/javascript'>
+		let container = document.getElementById("container");
+		function divGenerator(){
+			let div = document.createElement("div");
+			div.classList.add("element");
+			div.textContent = "Element";
+			container.appendChild(div);
+		}
+		let input = document.getElementById('add-item-btn')
+		input.addEventListener('click', divGenerator);
+	</script>
+</body>
+</html>
