@@ -13,12 +13,12 @@
 	<div class="element">Element 6</div>
 	<script>
 		let divs = document.getElementsByClassName("element");
-		divs[0].style.color = 'red'
-		divs[1].style.color = 'red'
-		divs[2].style.color = 'red'
-		divs[3].style.color = 'green'
-		divs[4].style.color = 'green'
-		divs[5].style.color = 'green'
+		for (var i = 0; i < divs.length; i++) {
+			if (i<=2) {divs[i].style.color = 'red'; 
+		} else {
+			divs[i].style.color='green';
+			}
+		}
 	</script>
 </body>
 </html>
