@@ -1,6 +1,14 @@
-.answer_error{
-    color: red;
+.answer_block{
+    border: #0b2e13 solid;
+    width: 25%;
 }
-.answer_success{
+
+.answer_block_success{
+    border: green solid;
     color: green;
+}
+
+.answer_block_error{
+    border: red solid;
+    color: red;
 }

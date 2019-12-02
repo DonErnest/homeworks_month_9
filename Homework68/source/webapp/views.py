@@ -18,7 +18,7 @@ def add_numbers(request, *args, **kwargs):
         return JsonResponse(answer)
     else:
         error = {
-            'error': "One value is not a number!", }
+            'error': 'One or both values are not numbers or missing!', }
         return JsonResponse(error, status=400)
 
 @csrf_exempt
@@ -32,7 +32,10 @@ def substract_numbers(request, *args, **kwargs):
         }
         return JsonResponse(answer)
     else:
-        return JsonResponse(data={'status':'false','message':'One value is not a number!'}, status=400)
+        error = {
+            'error': 'One or both values are not numbers or missing!', }
+        return JsonResponse(error, status=400)
+
 
 @csrf_exempt
 def multiply_numbers(request, *args, **kwargs):
@@ -45,7 +48,9 @@ def multiply_numbers(request, *args, **kwargs):
         }
         return JsonResponse(answer)
     else:
-        return JsonResponse(data={'status':'false','message':'One value is not a number!'}, status=400)
+        error = {
+            'error': 'One or both values are not numbers or missing!', }
+        return JsonResponse(error, status=400)
 
 
 @csrf_exempt
@@ -59,7 +64,9 @@ def divide_numbers(request, *args, **kwargs):
         }
         return JsonResponse(answer)
     else:
-        return JsonResponse(data={'status':'false', 'message':'One value is not a number!'}, status=400)
+        error = {
+            'error': 'One or both values are not numbers or missing!', }
+        return JsonResponse(error, status=400)
 
 
 def check_if_numbers(data):
@@ -67,9 +74,7 @@ def check_if_numbers(data):
         float(data['A'])
         float(data['B'])
         return True
-    except:
-    #
-    # if not isinstance(int(data['A']), int) or not isinstance(int(data['B']), int):
+    except ValueError:
         return False
 
 class IndexView(TemplateView):
