@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from webapp.views import add_numbers, substract_numbers, multiply_numbers, divide_numbers
+from webapp.views import add_numbers, substract_numbers, multiply_numbers, divide_numbers, IndexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', IndexView.as_view(), name='main'),
     path('add/', add_numbers, name = 'add numbers'),
     path('substract/', substract_numbers, name='substract numbers'),
     path('multiply/', multiply_numbers, name='multiply numbers'),
